@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" type="module"></script>
     <title>Todo App</title>
 </head>
 <body>
-    <h1>TODO APP</h1>
-</body>
+    <header>
+        <nav id="tab" class="tab">
+            <button class="closeBtn" onclick="closeNav()">X</button>
+            <button class="tablinks" onclick="openTab(event, 'homeTab')">Home</button>
+            <button class="tablinks" onclick="openTab(event, 'projectsTab')">Projects</button>
+            <button class="tablinks" onclick="openTab(event, 'prioritiesTab')">Priorities</button>
+        </nav>
+    </header>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">☰</button> 
+        <h1>TODO APP</h1>
+    </div>
+
+    <script defer>
+        function openNav() {
+        document.getElementById("tab").style.width = "200px";
+        document.getElementById("main").style.marginLeft = "200px";
+        }
+    
+        function closeNav() {
+        document.getElementById("tab").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
+    </body>
 </html>
